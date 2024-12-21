@@ -22,7 +22,7 @@ const router = createRouter({
       component: Jobs,
     },
     {
-      path: '/jobs/:id',
+      path: '/jobs/:id/:jobData',
       name: 'JobsDetails',
       component: JobsDetails,
       props: true,
