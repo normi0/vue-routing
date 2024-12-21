@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Jobs from '../views/jobs/Jobs.vue'
 import JobsDetails from '../views/jobs/JobsDetails.vue'
+import NotFound from '../views/NotFound.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -26,6 +27,15 @@ const router = createRouter({
       name: 'JobsDetails',
       component: JobsDetails,
       props: true,
+    },
+    {
+      path: '/all-jobs',
+      redirect: '/jobs',
+    },
+    {
+      path: '/:catchAll(.*)*',
+      name: 'NotFound',
+      component: NotFound,
     },
   ],
 })
